@@ -24,7 +24,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         code = str(random.randint(100000, 999999))
         ConfirmationCode.objects.create(user=user, code=code)
 
-        user.confirmation_code = code  # просто для отображения
+        user.confirmation_code = code  
         return user
 
 
